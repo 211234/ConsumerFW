@@ -15,7 +15,7 @@ let authToken = ""; // Variable global para almacenar el token
 async function connect() {
     const RegistroQueue = "Registro";
     const LoginQueue = "Login";
-    const sp32Queue = "sp32";
+    const sp32Queue = "Sp32";
   
     try {
       const conn = await amqp.connect(rabbitSettings);
@@ -42,7 +42,7 @@ async function connect() {
       });
   
       // Consumir la cola "esp32"
-      channel.consume(sp32Queue, async (msn) => {
+      channel.consume(Sp32Queue, async (msn) => {
         const data = msn.content.toString();
         console.log("Recibido de esp32Queue: ", data);
         const alarmaData = JSON.parse(data);
