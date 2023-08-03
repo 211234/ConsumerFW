@@ -58,7 +58,7 @@ async function connect() {
 async function saveUser(user) {
     // Envío del objeto user a la API para guardar usuarios
     try {
-      const response = await fetch("", {
+      const response = await fetch("http://3.94.50.44:3000/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ async function saveUser(user) {
 async function loginUser(loginData) {
     // Envío del objeto loginData a la API para realizar el inicio de sesión
     try {
-      const response = await fetch("", {
+      const response = await fetch("http://3.94.50.44:3000/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ async function registerAlarmaFire(alarmaData) {
     }
     // Envío del objeto sensorData a la API para registrar datos
     try {
-      const response = await fetch("", {
+      const response = await fetch("http://3.94.50.44:3000/sensor/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
