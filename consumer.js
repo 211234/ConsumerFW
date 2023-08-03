@@ -15,7 +15,7 @@ let authToken = ""; // Variable global para almacenar el token
 async function connect() {
     const RegistroQueue = "Registro";
     const LoginQueue = "Login";
-    const sp32Queue = "Sp32";
+    const Sp32Queue = "Sp32";
   
     try {
       const conn = await amqp.connect(rabbitSettings);
